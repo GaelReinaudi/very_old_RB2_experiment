@@ -1,0 +1,9 @@
+Pour pouvoir utiliser la fonction "And Open Origin" vous devez :
+
+1. avoir origin 7.5 SR5.
+2. lancer origin.
+3. ouvrir le code builder = icon en forme d'enrenage jaune...
+4. dans l'arborescence des fichiers, aller sur System ->click droit -> Add Files...
+5. ajouter le fichier "Rb2Manip_Origin.cpp" qui se trouve dans le dossier d'instalation de Rb2Manip.
+6. compiler : Tools->Rebuild All.
+7. fermer tout, et voila.

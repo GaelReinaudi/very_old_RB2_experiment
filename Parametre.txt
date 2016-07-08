@@ -1,0 +1,10 @@
+2007_12_21@11h51 
+ 
+ 
+ 
+m_PixelSizeSerie =  5.7 
+m_RangeAbsSerie =    1 
+m_CalculationType = ClassicalAbsorption 
+ 
+gain_dB = 9.4582 
+expo_ms = 1.94

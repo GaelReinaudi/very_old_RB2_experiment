@@ -1,0 +1,15 @@
+
+	sauvé le : 2008_06_07@00h13
+
+*********************************************************************************
+m_nParamGenetic =	3	,0	
+m_IndexSave =	0	,0	
+m_ListIndexInSave =	0	,0	,2,4	
+m_ListFromInSave =	-3	,0	,-1,-1	
+m_ListToInSave =	-1	,0	,-1,-1	
+m_ListStepInSave =	-1	,0	,-1,-1	
+m_PopuSize =	100	,0	
+m_Generation =	100	,0	
+m_TypeAlgo =	0	,0	
+m_CrossOverProba =	0.5	,0	
+m_MutationProba =	0.01	,0	

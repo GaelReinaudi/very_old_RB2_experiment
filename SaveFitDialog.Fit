@@ -1,0 +1,42 @@
+
+	sauvé le : 2008_06_07@00h13
+
+*********************************************************************************
+m_NbrIterFitDialog   =	30	,0	
+m_NbrComboFit        =	2	,0	
+m_ZoneViseur.top     =	20	,0	
+m_ZoneViseur.left    =	20	,0	
+m_ZoneViseur.bot     =	120	,0	
+m_ZoneViseur.right   =	120	,0	
+m_CentreCroix.x        =	70	,0	
+m_CentreCroix.y        =	70	,0	
+m_RightClickUp.x     =	20	,0	
+m_RightClickUp.y     =	20	,0	
+m_RightClickDown.x   =	70	,0	
+m_RightClickDown.y   =	70	,0	
+m_LeftClickUp.x     =	20	,0	
+m_LeftClickUp.y     =	20	,0	
+m_LeftClickDown.x   =	70	,0	
+m_LeftClickDown.y   =	70	,0	
+m_b[1]               =	1	,0	,-271828,-271828,-271828,-271828,-271828,-271828,-271828,-271828,-271828,-271828,-271828,-271828,-271828,-271828,-271828	
+m_f[1]               =	500	,0	,0,0.645,0,0,-2.71828,-2.71828,-2.71828,-2.71828,-2.71828,-2.71828,-2.71828,-2.71828,-2.71828,-2.71828,-2.71828	
+Expres_0 =	0	,0	
+Calcul_0 =	0	,0	
+Expres_01 =	0	,0	
+Calcul_01 =	0	,0	
+Expres_02 =	0	,0	
+Calcul_02 =	0	,0	
+Expres_03 =	0	,0	
+Calcul_03 =	0	,0	
+Expres_04 =	0	,0	
+Calcul_04 =	0	,0	
+Expres_05 =	0	,0	
+Calcul_05 =	0	,0	
+Expres_06 =	0	,0	
+Calcul_06 =	0	,0	
+Expres_07 =	0	,0	
+Calcul_07 =	0	,0	
+Expres_08 =	0	,0	
+Calcul_08 =	0	,0	
+Expres_09 =	0	,0	
+Calcul_09 =	0	,0	
