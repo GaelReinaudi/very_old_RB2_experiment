@@ -3,3 +3,6 @@
 /_UpgradeReport_Files/
 /VTune/
 *.ncb
+*.qmake.stash
+/Makefile
+*.pro.user
