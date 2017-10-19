@@ -45,7 +45,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="&quot;E:\Program Files (x86)\National Instruments\MeasurementStudioVS2008\VCNET\Include&quot;"
+				AdditionalIncludeDirectories="F:\Program Files (x86)\National Instruments\MeasurementStudioVS2008\VCNET\Include"
 				PreprocessorDefinitions="WIN32;_WINDOWS;_DEBUG;NI_MEASUREMENT_STUDIO"
 				MinimalRebuild="true"
 				ExceptionHandling="1"
@@ -133,6 +133,7 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
+				AdditionalIncludeDirectories="&quot;F:\Program Files (x86)\National Instruments\MeasurementStudioVS2008\VCNET\Include&quot;"
 				PreprocessorDefinitions="WIN32;_WINDOWS;NDEBUG;NI_MEASUREMENT_STUDIO"
 				MinimalRebuild="false"
 				ExceptionHandling="1"
