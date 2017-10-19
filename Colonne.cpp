@@ -100,8 +100,8 @@ Colonne::Colonne(const Colonne& UneCol, CString UnNewNom, unsigned int UnNewNomb
 		else
 			m_AnaChannel[i] = NULL;
 	}
-	m_LimiteDroiteEstUnSplit = UneCol.m_LimiteDroiteEstUnSplit;
-	m_LimiteGaucheEstUnSplit = UneCol.m_LimiteGaucheEstUnSplit;
+// 	m_LimiteDroiteEstUnSplit = UneCol.m_LimiteDroiteEstUnSplit;
+// 	m_LimiteGaucheEstUnSplit = UneCol.m_LimiteGaucheEstUnSplit;
 	NumberColonne++;
 }
 

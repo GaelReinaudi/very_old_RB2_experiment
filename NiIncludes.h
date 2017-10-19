@@ -15,7 +15,6 @@
 //  Includes
 ////////////////////////////////////////////////////////////////////////////////
 #include "NiCommonComponent.h"
-#include "NiDAQmxComponent.h"
 #include "NiUiComponent.h"
 #include "NiUiCommonComponent.h"
 

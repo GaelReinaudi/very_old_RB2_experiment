@@ -99,7 +99,7 @@ void CPortDialog::OnPaint()
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
 BEGIN_EVENTSINK_MAP(CPortDialog, CProDialog)
-	ON_EVENT(CPortDialog, IDC_PORT_CHECK_UPDATE_NOW, 1, ValueChangedPortCheckUpdateNow, VTS_BOOL)
+	ON_EVENT(CPortDialog, IDC_PORT_CHECK_UPDATE_NOW, 1, ValueChangedPortCheckUpdateNowButStartStopSequence, VTS_BOOL)
 	
 	ON_EVENT(CPortDialog, IDC_PORT_CHECK_UPDATE_MODE		, 1, ValueChangedPortCheckUpdateAuto, VTS_BOOL)
 
@@ -193,8 +193,16 @@ END_MESSAGE_MAP()
 //						Bouttons d'update : "mode" et "now!"
 /////////////////////////////////////////////////////////////////////////////////////////////////
 
+bool CPortDialog::ValueChangedPortCheckUpdateNowButStartStopSequence(BOOL Value)
+{	
+	m_pMainFrame->m_MainDialog.ValueChangedButtonStartSequence(Value);
+return 1;
+}
+
 bool CPortDialog::ValueChangedPortCheckUpdateNow(BOOL Value)
 {	
+// 	m_pMainFrame->m_MainDialog.ValueChangedButtonStartSequence(Value);
+// return 1;
 	if(Value == false) 
 		return false;
 
@@ -292,15 +300,15 @@ int CPortDialog::Current3dCoil_i(int Coil_i, int Mean, int DesEq)
 	if(Coil_i == 2)
 		value = (int)(double(Mean) - (double(Mean) * (double(DesEq) / 100.0)));
 
-	return min(5000, max(0, value));
+	return min(10000, max(0, value));
 }
 
 void CPortDialog::ValueChangedPortAna1Out00(BLABLA00){	m_Ana_1_Out[0]	=		int( Value->dblVal );	ValueChangedPortCheckUpdateNow(m_bUpdateAuto);	if(m_bUpdateAuto) DrawSeq();	PortChanged();	}
 void CPortDialog::ValueChangedPortAna1Out01(BLABLA00){	m_Ana_1_Out[1]	=		int( Value->dblVal );	ValueChangedPortCheckUpdateNow(m_bUpdateAuto);	if(m_bUpdateAuto) DrawSeq();	PortChanged();	}
 void CPortDialog::ValueChangedPortAna1Out02(BLABLA00){	m_Ana_1_Out[2]	=		int( Value->dblVal );	ValueChangedPortCheckUpdateNow(m_bUpdateAuto);	if(m_bUpdateAuto) DrawSeq();	PortChanged();	}
 void CPortDialog::ValueChangedPortAna1Out03(BLABLA00){	m_Ana_1_Out[3]	=		int( Value->dblVal );	ValueChangedPortCheckUpdateNow(m_bUpdateAuto);	if(m_bUpdateAuto) DrawSeq();	PortChanged();	}
-void CPortDialog::ValueChangedPortAna1Out04(BLABLA00){	m_3dMeanCurrent	=		int( Value->dblVal );  m_Ana_1_Out[4] = Current3dCoil_i(1, m_3dMeanCurrent, m_3dDesEquilibr);m_Ana_1_Out[5] = Current3dCoil_i(2, m_3dMeanCurrent, m_3dDesEquilibr);	ValueChangedPortCheckUpdateNow(m_bUpdateAuto);	if(m_bUpdateAuto) DrawSeq();	PortChanged();	}
-void CPortDialog::ValueChangedPortAna1Out05(BLABLA00){	m_3dDesEquilibr	=		int( Value->dblVal );  m_Ana_1_Out[5] = Current3dCoil_i(2, m_3dMeanCurrent, m_3dDesEquilibr);m_Ana_1_Out[4] = Current3dCoil_i(1, m_3dMeanCurrent, m_3dDesEquilibr);	ValueChangedPortCheckUpdateNow(m_bUpdateAuto);	if(m_bUpdateAuto) DrawSeq();	PortChanged();	}
+void CPortDialog::ValueChangedPortAna1Out04(BLABLA00){	m_Ana_1_Out[4]	=		int( Value->dblVal );	ValueChangedPortCheckUpdateNow(m_bUpdateAuto);	if(m_bUpdateAuto) DrawSeq();	PortChanged();	}
+void CPortDialog::ValueChangedPortAna1Out05(BLABLA00){	m_Ana_1_Out[5]	=		int( Value->dblVal );	ValueChangedPortCheckUpdateNow(m_bUpdateAuto);	if(m_bUpdateAuto) DrawSeq();	PortChanged();	}
 void CPortDialog::ValueChangedPortAna1Out06(BLABLA00){	m_Ana_1_Out[6]	=		int( Value->dblVal );	ValueChangedPortCheckUpdateNow(m_bUpdateAuto);	if(m_bUpdateAuto) DrawSeq();	PortChanged();	}
 void CPortDialog::ValueChangedPortAna1Out07(BLABLA00){	m_Ana_1_Out[7]	=		int( Value->dblVal );	ValueChangedPortCheckUpdateNow(m_bUpdateAuto);	if(m_bUpdateAuto) DrawSeq();	PortChanged();	}
 void CPortDialog::ValueChangedPortAna2Out00(BLABLA00){	m_Ana_2_Out[0]	=		int( Value->dblVal );	ValueChangedPortCheckUpdateNow(m_bUpdateAuto);	if(m_bUpdateAuto) DrawSeq();	PortChanged();	}
@@ -516,8 +524,8 @@ int CPortDialog::UpdateControls()
 	CheckDlgButton(	IDC_PORT_ANA_1_OUT_01	,	m_Ana_1_Out[1]	);
 	CheckDlgButton(	IDC_PORT_ANA_1_OUT_02	,	m_Ana_1_Out[2]	);
 	CheckDlgButton(	IDC_PORT_ANA_1_OUT_03	,	m_Ana_1_Out[3]	);	
-	CheckDlgButton(	IDC_PORT_ANA_1_OUT_04	,	m_3dMeanCurrent	);	
-	CheckDlgButton(	IDC_PORT_ANA_1_OUT_05	,	m_3dDesEquilibr	);
+	CheckDlgButton(	IDC_PORT_ANA_1_OUT_04	,	m_Ana_1_Out[4]	);	
+	CheckDlgButton(	IDC_PORT_ANA_1_OUT_05	,	m_Ana_1_Out[5]	);
 	CheckDlgButton(	IDC_PORT_ANA_1_OUT_06	,	m_Ana_1_Out[6]	);
 	CheckDlgButton(	IDC_PORT_ANA_1_OUT_07	,	m_Ana_1_Out[7]	);
 	CheckDlgButton(	IDC_PORT_ANA_2_OUT_00	,	m_Ana_2_Out[0]	);
@@ -548,8 +556,8 @@ void CPortDialog::MouseUpEditPortAna1Out00	(short Button, short Shift, long x, l
 void CPortDialog::MouseUpEditPortAna1Out01	(short Button, short Shift, long x, long y)	{	if(Shift != 2)	{return;}	AddToVariation(&m_Ana_1_Out[1]);}
 void CPortDialog::MouseUpEditPortAna1Out02	(short Button, short Shift, long x, long y)	{	if(Shift != 2)	{return;}	AddToVariation(&m_Ana_1_Out[2]);}
 void CPortDialog::MouseUpEditPortAna1Out03	(short Button, short Shift, long x, long y)	{	if(Shift != 2)	{return;}	AddToVariation(&m_Ana_1_Out[3]);}
-void CPortDialog::MouseUpEditPortAna1Out04	(short Button, short Shift, long x, long y)	{	if(Shift != 2)	{return;}	AddToVariation(&m_3dMeanCurrent);}
-void CPortDialog::MouseUpEditPortAna1Out05	(short Button, short Shift, long x, long y)	{	if(Shift != 2)	{return;}	AddToVariation(&m_3dDesEquilibr);}
+void CPortDialog::MouseUpEditPortAna1Out04	(short Button, short Shift, long x, long y)	{	if(Shift != 2)	{return;}	AddToVariation(&m_Ana_1_Out[4]);}
+void CPortDialog::MouseUpEditPortAna1Out05	(short Button, short Shift, long x, long y)	{	if(Shift != 2)	{return;}	AddToVariation(&m_Ana_1_Out[5]);}
 void CPortDialog::MouseUpEditPortAna1Out06	(short Button, short Shift, long x, long y)	{	if(Shift != 2)	{return;}	AddToVariation(&m_Ana_1_Out[6]);}
 void CPortDialog::MouseUpEditPortAna1Out07	(short Button, short Shift, long x, long y)	{	if(Shift != 2)	{return;}	AddToVariation(&m_Ana_1_Out[7]);}
 void CPortDialog::MouseUpEditPortAna2Out00	(short Button, short Shift, long x, long y)	{	if(Shift != 2)	{return;}	AddToVariation(&m_Ana_2_Out[0]);}
@@ -575,8 +583,8 @@ void CPortDialog::UpdateEditColor(bool TousBlancs /* = false */)
 			if(pLePar->Get_pVal() ==	&m_Ana_1_Out[1]	){	m_NiEditAna1Out01.SetBackColor( CNiColor(255,255, pLePar->Varie * !TousBlancs ? 0 : 255) ); }	
 			if(pLePar->Get_pVal() ==	&m_Ana_1_Out[2]	){	m_NiEditAna1Out02.SetBackColor( CNiColor(255,255, pLePar->Varie * !TousBlancs ? 0 : 255) ); }	
 			if(pLePar->Get_pVal() ==	&m_Ana_1_Out[3]	){	m_NiEditAna1Out03.SetBackColor( CNiColor(255,255, pLePar->Varie * !TousBlancs ? 0 : 255) ); }	
-			if(pLePar->Get_pVal() ==	&m_3dMeanCurrent){	m_NiEditAna1Out04.SetBackColor( CNiColor(255,255, pLePar->Varie * !TousBlancs ? 0 : 255) ); }	
-			if(pLePar->Get_pVal() ==	&m_3dDesEquilibr){	m_NiEditAna1Out05.SetBackColor( CNiColor(255,255, pLePar->Varie * !TousBlancs ? 0 : 255) ); }	
+			if(pLePar->Get_pVal() ==	&m_Ana_1_Out[4]){	m_NiEditAna1Out04.SetBackColor( CNiColor(255,255, pLePar->Varie * !TousBlancs ? 0 : 255) ); }	
+			if(pLePar->Get_pVal() ==	&m_Ana_1_Out[5]){	m_NiEditAna1Out05.SetBackColor( CNiColor(255,255, pLePar->Varie * !TousBlancs ? 0 : 255) ); }	
 			if(pLePar->Get_pVal() ==	&m_Ana_1_Out[6]	){	m_NiEditAna1Out06.SetBackColor( CNiColor(255,255, pLePar->Varie * !TousBlancs ? 0 : 255) ); }	
 			if(pLePar->Get_pVal() ==	&m_Ana_1_Out[7]	){	m_NiEditAna1Out07.SetBackColor( CNiColor(255,255, pLePar->Varie * !TousBlancs ? 0 : 255) ); }	
 			if(pLePar->Get_pVal() ==	&m_Ana_2_Out[0]	){	m_NiEditAna2Out00.SetBackColor( CNiColor(255,255, pLePar->Varie * !TousBlancs ? 0 : 255) ); }	

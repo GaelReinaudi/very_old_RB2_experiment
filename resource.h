@@ -42,6 +42,7 @@
 #define IDI_MAIN_ICON                   167
 #define IDD_DIALOG_SPEAK_WITH_ORIGIN    169
 #define IDD_DIALOG_FILM_COLONNES        170
+#define IDD_DIALOG1                     172
 #define IDC_TRANSLATION_COMBO_ANALOG_IN 1000
 #define ID_CLOCK_TIMER_MAIN_DIALOG      1001
 #define IDC_TRANSLATION_STATIC_DELAY_MONITOR_POS_VIT 1001
@@ -507,6 +508,7 @@
 #define IDC_PORT_CHECK_UPDATE_MODE      1405
 #define IDC_MAIN_EDIT_89                1405
 #define IDC_PORT_CHECK_UPDATE_NOW       1406
+#define IDC_MAIN_EDIT_90                1406
 #define IDC_PORT_DIG_OUT_00             1407
 #define IDC_PORT_DIG_OUT_01             1408
 #define IDC_PORT_DIG_OUT_02             1409
@@ -592,7 +594,7 @@
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        172
+#define _APS_NEXT_RESOURCE_VALUE        173
 #define _APS_NEXT_COMMAND_VALUE         32823
 #define _APS_NEXT_CONTROL_VALUE         1315
 #define _APS_NEXT_SYMED_VALUE           114

@@ -775,46 +775,46 @@ unsigned int CMainFrame::DefineAllParameters()
 //*********************************************************************************************************************************************************************************************************
 //******************	Declaration des parametres de la fenetre PortDialog		***************************************************************************************************************************
 //*********************************************************************************************************************************************************************************************************
-	new CParametre(&m_Save, Entier,	"Zeeman         ","m_PortDialog.m_bDigOut[0]       ",/*Param_*/FIRST_INDEX_PARAM_PORT + 0, &m_PortDialog.m_bDigOut[0]	, "1", CanParticipateToNothing	);
+	new CParametre(&m_Save, Entier,	"Sr88           ","m_PortDialog.m_bDigOut[0]       ",/*Param_*/FIRST_INDEX_PARAM_PORT + 0, &m_PortDialog.m_bDigOut[0]	, "1", CanParticipateToNothing	);
 	new CParametre(&m_Save, Entier,	"MotAom         ","m_PortDialog.m_bDigOut[1]       ",/*Param_*/FIRST_INDEX_PARAM_PORT + 1, &m_PortDialog.m_bDigOut[1]	, "0", CanParticipateToNothing	);
-	new CParametre(&m_Save, Entier,	"MotClic        ","m_PortDialog.m_bDigOut[2]       ",/*Param_*/FIRST_INDEX_PARAM_PORT + 2, &m_PortDialog.m_bDigOut[2]	, "1", CanParticipateToNothing	);
-	new CParametre(&m_Save, Entier,	"RepAom         ","m_PortDialog.m_bDigOut[3]       ",/*Param_*/FIRST_INDEX_PARAM_PORT + 3, &m_PortDialog.m_bDigOut[3]	, "0", CanParticipateToNothing	);
-	new CParametre(&m_Save, Entier,	"RepClic        ","m_PortDialog.m_bDigOut[4]       ",/*Param_*/FIRST_INDEX_PARAM_PORT + 4, &m_PortDialog.m_bDigOut[4]	, "0", CanParticipateToNothing	);
+	new CParametre(&m_Save, Entier,	"MotZSShuter    ","m_PortDialog.m_bDigOut[2]       ",/*Param_*/FIRST_INDEX_PARAM_PORT + 2, &m_PortDialog.m_bDigOut[2]	, "1", CanParticipateToNothing	);
+	new CParametre(&m_Save, Entier,	"03             ","m_PortDialog.m_bDigOut[3]       ",/*Param_*/FIRST_INDEX_PARAM_PORT + 3, &m_PortDialog.m_bDigOut[3]	, "0", CanParticipateToNothing	);
+	new CParametre(&m_Save, Entier,	"ZS+Repumps     ","m_PortDialog.m_bDigOut[4]       ",/*Param_*/FIRST_INDEX_PARAM_PORT + 4, &m_PortDialog.m_bDigOut[4]	, "0", CanParticipateToNothing	);
 	new CParametre(&m_Save, Entier,	"ImagAom        ","m_PortDialog.m_bDigOut[5]       ",/*Param_*/FIRST_INDEX_PARAM_PORT + 5, &m_PortDialog.m_bDigOut[5]	, "0", CanParticipateToNothing	);
-	new CParametre(&m_Save, Entier,	"ImagClic       ","m_PortDialog.m_bDigOut[6]       ",/*Param_*/FIRST_INDEX_PARAM_PORT + 6, &m_PortDialog.m_bDigOut[6]	, "0", CanParticipateToNothing	);
-	new CParametre(&m_Save, Entier,	"RepNorm        ","m_PortDialog.m_bDigOut[7]       ",/*Param_*/FIRST_INDEX_PARAM_PORT + 7, &m_PortDialog.m_bDigOut[7]	, "0", CanParticipateToNothing	);
-	new CParametre(&m_Save, Entier,	"HLaunch        ","m_PortDialog.m_bDigOut[8]       ",/*Param_*/FIRST_INDEX_PARAM_PORT + 8, &m_PortDialog.m_bDigOut[8]	, "0", CanParticipateToNothing	);
-	new CParametre(&m_Save, Entier,	"VLaunch        ","m_PortDialog.m_bDigOut[9]       ",/*Param_*/FIRST_INDEX_PARAM_PORT + 9, &m_PortDialog.m_bDigOut[9]	, "0", CanParticipateToNothing	);
-	new CParametre(&m_Save, Entier,	"3dMot          ","m_PortDialog.m_bDigOut[10]      ",/*Param_*/FIRST_INDEX_PARAM_PORT + 10,&m_PortDialog.m_bDigOut[10]	, "0", CanParticipateToNothing	);
-	new CParametre(&m_Save, Entier,	"2dMot          ","m_PortDialog.m_bDigOut[11]      ",/*Param_*/FIRST_INDEX_PARAM_PORT + 11,&m_PortDialog.m_bDigOut[11]	, "0", CanParticipateToNothing	);
-	new CParametre(&m_Save, Entier,	"2dCompress     ","m_PortDialog.m_bDigOut[12]      ",/*Param_*/FIRST_INDEX_PARAM_PORT + 12,&m_PortDialog.m_bDigOut[12]	, "0", CanParticipateToNothing	);
-	new CParametre(&m_Save, Entier,	"2dPreguide     ","m_PortDialog.m_bDigOut[13]      ",/*Param_*/FIRST_INDEX_PARAM_PORT + 13,&m_PortDialog.m_bDigOut[13]	, "0", CanParticipateToNothing	);
-	new CParametre(&m_Save, Entier,	"BigBiasPreguide","m_PortDialog.m_bDigOut[14]      ",/*Param_*/FIRST_INDEX_PARAM_PORT + 14,&m_PortDialog.m_bDigOut[14]	, "0", CanParticipateToNothing	);
-	new CParametre(&m_Save, Entier,	"PinchCoil      ","m_PortDialog.m_bDigOut[15]      ",/*Param_*/FIRST_INDEX_PARAM_PORT + 15,&m_PortDialog.m_bDigOut[15]	, "0", CanParticipateToNothing	);
-	new CParametre(&m_Save, Entier,	"PolarField     ","m_PortDialog.m_bDigOut[16]      ",/*Param_*/FIRST_INDEX_PARAM_PORT + 16,&m_PortDialog.m_bDigOut[16]	, "0", CanParticipateToNothing	);
-	new CParametre(&m_Save, Entier,	"Trigger        ","m_PortDialog.m_bDigOut[17]      ",/*Param_*/FIRST_INDEX_PARAM_PORT + 17,&m_PortDialog.m_bDigOut[17]	, "0", CanParticipateToNothing	);
-	new CParametre(&m_Save, Entier,	"CamTrigger     ","m_PortDialog.m_bDigOut[18]      ",/*Param_*/FIRST_INDEX_PARAM_PORT + 18,&m_PortDialog.m_bDigOut[18]	, "0", CanParticipateToNothing	);
-	new CParametre(&m_Save, Entier,	"PhD1Off        ","m_PortDialog.m_bDigOut[19]      ",/*Param_*/FIRST_INDEX_PARAM_PORT + 19,&m_PortDialog.m_bDigOut[19]	, "0", CanParticipateToNothing	);
-	new CParametre(&m_Save, Entier,	"PhD2Off        ","m_PortDialog.m_bDigOut[20]      ",/*Param_*/FIRST_INDEX_PARAM_PORT + 20,&m_PortDialog.m_bDigOut[20]	, "0", CanParticipateToNothing	);
-	new CParametre(&m_Save, Entier,	"Vert1Off       ","m_PortDialog.m_bDigOut[21]      ",/*Param_*/FIRST_INDEX_PARAM_PORT + 21,&m_PortDialog.m_bDigOut[21]	, "0", CanParticipateToNothing	);
-	new CParametre(&m_Save, Entier,	"Vert2Off       ","m_PortDialog.m_bDigOut[22]      ",/*Param_*/FIRST_INDEX_PARAM_PORT + 22,&m_PortDialog.m_bDigOut[22]	, "0", CanParticipateToNothing	);
-	new CParametre(&m_Save, Entier,	"Extra3         ","m_PortDialog.m_bDigOut[23]      ",/*Param_*/FIRST_INDEX_PARAM_PORT + 23,&m_PortDialog.m_bDigOut[23]	, "0", CanParticipateToNothing	);
-	new CParametre(&m_Save, Entier,	"Extra4         ","m_PortDialog.m_bDigOut[24]      ",/*Param_*/FIRST_INDEX_PARAM_PORT + 24,&m_PortDialog.m_bDigOut[24]	, "0", CanParticipateToNothing	);
-	new CParametre(&m_Save, Entier,	"Extra5         ","m_PortDialog.m_bDigOut[25]      ",/*Param_*/FIRST_INDEX_PARAM_PORT + 25,&m_PortDialog.m_bDigOut[25]	, "0", CanParticipateToNothing	);
-	new CParametre(&m_Save, Entier,	"Extra6         ","m_PortDialog.m_bDigOut[26]      ",/*Param_*/FIRST_INDEX_PARAM_PORT + 26,&m_PortDialog.m_bDigOut[26]	, "0", CanParticipateToNothing	);
-	new CParametre(&m_Save, Entier,	"Extra7         ","m_PortDialog.m_bDigOut[27]      ",/*Param_*/FIRST_INDEX_PARAM_PORT + 27,&m_PortDialog.m_bDigOut[27]	, "0", CanParticipateToNothing	);
-	new CParametre(&m_Save, Entier,	"Extra8         ","m_PortDialog.m_bDigOut[28]      ",/*Param_*/FIRST_INDEX_PARAM_PORT + 28,&m_PortDialog.m_bDigOut[28]	, "0", CanParticipateToNothing	);
-	new CParametre(&m_Save, Entier,	"Extra9         ","m_PortDialog.m_bDigOut[29]      ",/*Param_*/FIRST_INDEX_PARAM_PORT + 29,&m_PortDialog.m_bDigOut[29]	, "0", CanParticipateToNothing	);
-	new CParametre(&m_Save, Entier,	"Extra10        ","m_PortDialog.m_bDigOut[30]      ",/*Param_*/FIRST_INDEX_PARAM_PORT + 30,&m_PortDialog.m_bDigOut[30]	, "0", CanParticipateToNothing	);
-	new CParametre(&m_Save, Entier,	"Extra11        ","m_PortDialog.m_bDigOut[31]      ",/*Param_*/FIRST_INDEX_PARAM_PORT + 31,&m_PortDialog.m_bDigOut[31]	, "0", CanParticipateToNothing	);
-	new CParametre(&m_Save, Entier,	"MotDet         ","m_PortDialog.m_Ana_1_Out[0]     ",/*Param_*/FIRST_INDEX_PARAM_PORT + 50,&m_PortDialog.m_Ana_1_Out[0]	, "0", CanParticipateVariation | CanParticipateGeneticAlgo 	);	 	
-	new CParametre(&m_Save, Entier,	"MotInt         ","m_PortDialog.m_Ana_1_Out[1]     ",/*Param_*/FIRST_INDEX_PARAM_PORT + 51,&m_PortDialog.m_Ana_1_Out[1]	, "0", CanParticipateVariation | CanParticipateGeneticAlgo 	);	 	
-	new CParametre(&m_Save, Entier,	"RepInt         ","m_PortDialog.m_Ana_1_Out[2]     ",/*Param_*/FIRST_INDEX_PARAM_PORT + 52,&m_PortDialog.m_Ana_1_Out[2]	, "0", CanParticipateVariation | CanParticipateGeneticAlgo 	); 	
-	new CParametre(&m_Save, Entier,	"Monst_1        ","m_PortDialog.m_Ana_1_Out[3]     ",/*Param_*/FIRST_INDEX_PARAM_PORT + 53,&m_PortDialog.m_Ana_1_Out[3]	, "0", CanParticipateVariation | CanParticipateGeneticAlgo 	);
-	new CParametre(&m_Save, Entier,	"m_3dMeanCurrent","m_PortDialog.m_3dMeanCurrent    ",/*Param_*/FIRST_INDEX_PARAM_PORT + 54,&m_PortDialog.m_3dMeanCurrent, "0", CanParticipateVariation | CanParticipateGeneticAlgo 	);
-	new CParametre(&m_Save, Entier,	"m_3dDesEquilibr","m_PortDialog.m_3dDesEquilibr    ",/*Param_*/FIRST_INDEX_PARAM_PORT + 55,&m_PortDialog.m_3dDesEquilibr, "0", CanParticipateVariation | CanParticipateGeneticAlgo 	);
-	new CParametre(&m_Save, Entier,	"2dCMot         ","m_PortDialog.m_Ana_1_Out[6]     ",/*Param_*/FIRST_INDEX_PARAM_PORT + 56,&m_PortDialog.m_Ana_1_Out[6]	, "0", CanParticipateVariation | CanParticipateGeneticAlgo 	);	 	
-	new CParametre(&m_Save, Entier,	"Monst_2        ","m_PortDialog.m_Ana_1_Out[7]     ",/*Param_*/FIRST_INDEX_PARAM_PORT + 57,&m_PortDialog.m_Ana_1_Out[7]	, "0", CanParticipateVariation | CanParticipateGeneticAlgo 	);
+	new CParametre(&m_Save, Entier,	"ImagShutter    ","m_PortDialog.m_bDigOut[6]       ",/*Param_*/FIRST_INDEX_PARAM_PORT + 6, &m_PortDialog.m_bDigOut[6]	, "0", CanParticipateToNothing	);
+	new CParametre(&m_Save, Entier,	"914nmShutter   ","m_PortDialog.m_bDigOut[7]       ",/*Param_*/FIRST_INDEX_PARAM_PORT + 7, &m_PortDialog.m_bDigOut[7]	, "0", CanParticipateToNothing	);
+	new CParametre(&m_Save, Entier,	"08             ","m_PortDialog.m_bDigOut[8]       ",/*Param_*/FIRST_INDEX_PARAM_PORT + 8, &m_PortDialog.m_bDigOut[8]	, "0", CanParticipateToNothing	);
+	new CParametre(&m_Save, Entier,	"3Dness         ","m_PortDialog.m_bDigOut[9]       ",/*Param_*/FIRST_INDEX_PARAM_PORT + 9, &m_PortDialog.m_bDigOut[9]	, "0", CanParticipateToNothing	);
+	new CParametre(&m_Save, Entier,	"10             ","m_PortDialog.m_bDigOut[10]      ",/*Param_*/FIRST_INDEX_PARAM_PORT + 10,&m_PortDialog.m_bDigOut[10]	, "0", CanParticipateToNothing	);
+	new CParametre(&m_Save, Entier,	"11             ","m_PortDialog.m_bDigOut[11]      ",/*Param_*/FIRST_INDEX_PARAM_PORT + 11,&m_PortDialog.m_bDigOut[11]	, "0", CanParticipateToNothing	);
+	new CParametre(&m_Save, Entier,	"CamTrigger     ","m_PortDialog.m_bDigOut[12]      ",/*Param_*/FIRST_INDEX_PARAM_PORT + 12,&m_PortDialog.m_bDigOut[12]	, "0", CanParticipateToNothing	);
+	new CParametre(&m_Save, Entier,	"RepumpShutter  ","m_PortDialog.m_bDigOut[13]      ",/*Param_*/FIRST_INDEX_PARAM_PORT + 13,&m_PortDialog.m_bDigOut[13]	, "0", CanParticipateToNothing	);
+	new CParametre(&m_Save, Entier,	"RedMOTShutter  ","m_PortDialog.m_bDigOut[14]      ",/*Param_*/FIRST_INDEX_PARAM_PORT + 14,&m_PortDialog.m_bDigOut[14]	, "0", CanParticipateToNothing	);
+	new CParametre(&m_Save, Entier,	"IGBT           ","m_PortDialog.m_bDigOut[15]      ",/*Param_*/FIRST_INDEX_PARAM_PORT + 15,&m_PortDialog.m_bDigOut[15]	, "0", CanParticipateToNothing	);
+	new CParametre(&m_Save, Entier,	"16             ","m_PortDialog.m_bDigOut[16]      ",/*Param_*/FIRST_INDEX_PARAM_PORT + 16,&m_PortDialog.m_bDigOut[16]	, "0", CanParticipateToNothing	);
+	new CParametre(&m_Save, Entier,	"RedBroad       ","m_PortDialog.m_bDigOut[17]      ",/*Param_*/FIRST_INDEX_PARAM_PORT + 17,&m_PortDialog.m_bDigOut[17]	, "0", CanParticipateToNothing	);
+	new CParametre(&m_Save, Entier,	"RedSingle      ","m_PortDialog.m_bDigOut[18]      ",/*Param_*/FIRST_INDEX_PARAM_PORT + 18,&m_PortDialog.m_bDigOut[18]	, "0", CanParticipateToNothing	);
+	new CParametre(&m_Save, Entier,	"19             ","m_PortDialog.m_bDigOut[19]      ",/*Param_*/FIRST_INDEX_PARAM_PORT + 19,&m_PortDialog.m_bDigOut[19]	, "0", CanParticipateToNothing	);
+	new CParametre(&m_Save, Entier,	"20             ","m_PortDialog.m_bDigOut[20]      ",/*Param_*/FIRST_INDEX_PARAM_PORT + 20,&m_PortDialog.m_bDigOut[20]	, "0", CanParticipateToNothing	);
+	new CParametre(&m_Save, Entier,	"21             ","m_PortDialog.m_bDigOut[21]      ",/*Param_*/FIRST_INDEX_PARAM_PORT + 21,&m_PortDialog.m_bDigOut[21]	, "0", CanParticipateToNothing	);
+	new CParametre(&m_Save, Entier,	"22             ","m_PortDialog.m_bDigOut[22]      ",/*Param_*/FIRST_INDEX_PARAM_PORT + 22,&m_PortDialog.m_bDigOut[22]	, "0", CanParticipateToNothing	);
+	new CParametre(&m_Save, Entier,	"BShut          ","m_PortDialog.m_bDigOut[23]      ",/*Param_*/FIRST_INDEX_PARAM_PORT + 23,&m_PortDialog.m_bDigOut[23]	, "0", CanParticipateToNothing	);
+	new CParametre(&m_Save, Entier,	"CShut          ","m_PortDialog.m_bDigOut[24]      ",/*Param_*/FIRST_INDEX_PARAM_PORT + 24,&m_PortDialog.m_bDigOut[24]	, "0", CanParticipateToNothing	);
+	new CParametre(&m_Save, Entier,	"25             ","m_PortDialog.m_bDigOut[25]      ",/*Param_*/FIRST_INDEX_PARAM_PORT + 25,&m_PortDialog.m_bDigOut[25]	, "0", CanParticipateToNothing	);
+	new CParametre(&m_Save, Entier,	"26             ","m_PortDialog.m_bDigOut[26]      ",/*Param_*/FIRST_INDEX_PARAM_PORT + 26,&m_PortDialog.m_bDigOut[26]	, "0", CanParticipateToNothing	);
+	new CParametre(&m_Save, Entier,	"E650             ","m_PortDialog.m_bDigOut[27]      ",/*Param_*/FIRST_INDEX_PARAM_PORT + 27,&m_PortDialog.m_bDigOut[27]	, "0", CanParticipateToNothing	);
+	new CParametre(&m_Save, Entier,	"D689             ","m_PortDialog.m_bDigOut[28]      ",/*Param_*/FIRST_INDEX_PARAM_PORT + 28,&m_PortDialog.m_bDigOut[28]	, "0", CanParticipateToNothing	);
+	new CParametre(&m_Save, Entier,	"C689             ","m_PortDialog.m_bDigOut[29]      ",/*Param_*/FIRST_INDEX_PARAM_PORT + 29,&m_PortDialog.m_bDigOut[29]	, "0", CanParticipateToNothing	);
+	new CParametre(&m_Save, Entier,	"B689             ","m_PortDialog.m_bDigOut[30]      ",/*Param_*/FIRST_INDEX_PARAM_PORT + 30,&m_PortDialog.m_bDigOut[30]	, "0", CanParticipateToNothing	);
+	new CParametre(&m_Save, Entier,	"PShut             ","m_PortDialog.m_bDigOut[31]      ",/*Param_*/FIRST_INDEX_PARAM_PORT + 31,&m_PortDialog.m_bDigOut[31]	, "0", CanParticipateToNothing	);
+	new CParametre(&m_Save, Entier,	"V-Bz		    ","m_PortDialog.m_Ana_1_Out[0]     ",/*Param_*/FIRST_INDEX_PARAM_PORT + 50,&m_PortDialog.m_Ana_1_Out[0]	, "0", CanParticipateVariation | CanParticipateGeneticAlgo 	);	 	
+	new CParametre(&m_Save, Entier,	"ZS Det         ","m_PortDialog.m_Ana_1_Out[1]     ",/*Param_*/FIRST_INDEX_PARAM_PORT + 51,&m_PortDialog.m_Ana_1_Out[1]	, "0", CanParticipateVariation | CanParticipateGeneticAlgo 	);	 	
+	new CParametre(&m_Save, Entier,	"3DLattRamp     ","m_PortDialog.m_Ana_1_Out[2]     ",/*Param_*/FIRST_INDEX_PARAM_PORT + 52,&m_PortDialog.m_Ana_1_Out[2]	, "0", CanParticipateVariation | CanParticipateGeneticAlgo 	); 	
+	new CParametre(&m_Save, Entier,	"BAttenLaser    ","m_PortDialog.m_Ana_1_Out[3]     ",/*Param_*/FIRST_INDEX_PARAM_PORT + 53,&m_PortDialog.m_Ana_1_Out[3]	, "0", CanParticipateVariation | CanParticipateGeneticAlgo 	);
+	new CParametre(&m_Save, Entier,	"Ana 04         ","m_PortDialog.m_Ana_1_Out[4]     ",/*Param_*/FIRST_INDEX_PARAM_PORT + 54,&m_PortDialog.m_Ana_1_Out[4] , "0", CanParticipateVariation | CanParticipateGeneticAlgo 	);
+	new CParametre(&m_Save, Entier,	"Ana 05         ","m_PortDialog.m_Ana_1_Out[5]     ",/*Param_*/FIRST_INDEX_PARAM_PORT + 55,&m_PortDialog.m_Ana_1_Out[5] , "0", CanParticipateVariation | CanParticipateGeneticAlgo 	);
+	new CParametre(&m_Save, Entier,	"Ana 06         ","m_PortDialog.m_Ana_1_Out[6]     ",/*Param_*/FIRST_INDEX_PARAM_PORT + 56,&m_PortDialog.m_Ana_1_Out[6]	, "0", CanParticipateVariation | CanParticipateGeneticAlgo 	);	 	
+	new CParametre(&m_Save, Entier,	"I_MOT          ","m_PortDialog.m_Ana_1_Out[7]     ",/*Param_*/FIRST_INDEX_PARAM_PORT + 57,&m_PortDialog.m_Ana_1_Out[7]	, "0", CanParticipateVariation | CanParticipateGeneticAlgo 	);
 	new CParametre(&m_Save, Entier,	"IntExtra0      ","m_PortDialog.m_Ana_2_Out[0]     ",/*Param_*/FIRST_INDEX_PARAM_PORT + 60,&m_PortDialog.m_Ana_2_Out[0]	, "0", CanParticipateVariation | CanParticipateGeneticAlgo 	);
 	new CParametre(&m_Save, Entier,	"ImagInt        ","m_PortDialog.m_Ana_2_Out[1]     ",/*Param_*/FIRST_INDEX_PARAM_PORT + 61,&m_PortDialog.m_Ana_2_Out[1]	, "0", CanParticipateVariation | CanParticipateGeneticAlgo 	);
 	new CParametre(&m_Save, Entier,	"GuideCurent    ","m_PortDialog.m_Ana_2_Out[2]     ",/*Param_*/FIRST_INDEX_PARAM_PORT + 62,&m_PortDialog.m_Ana_2_Out[2]	, "0", CanParticipateVariation | CanParticipateGeneticAlgo 	);
@@ -839,7 +839,7 @@ unsigned int CMainFrame::DefineAllParameters()
 	for(int iemePortSaveAna = 0; iemePortSaveAna < 10; iemePortSaveAna++)
 	{
 		sprintf(pNameSave,"m_PortDialog.m_PortAna_Save[%d][%d]          ", iemePortSaveAna, 0);		CString NameSave(pNameSave);
-	new CParametre(&m_Save, Entier,	"AnaSave        "		,NameSave								,/*Param_*/FIRST_INDEX_PARAM_PORT + 80 + iemePortSaveAna,	&m_PortDialog.m_PortAna_Save[iemePortSaveAna][0], "0", CanParticipateToNothing	,NUMBER_ANA_OUTPUT	,0	,-1	,-1	,-1);
+//2011	new CParametre(&m_Save, Entier,	"AnaSave        "		,NameSave								,/*Param_*/FIRST_INDEX_PARAM_PORT + 80 + iemePortSaveAna,	&m_PortDialog.m_PortAna_Save[iemePortSaveAna][0], "0", CanParticipateToNothing	,NUMBER_ANA_OUTPUT	,0	,-1	,-1	,-1);
 	}
 	// On se fait le lien entre les sorties digitales Par défaut d'une séquence et les bon parametre
 	for(int i = 0; i < NUMBER_DIG_OUTPUT; i++)																														   

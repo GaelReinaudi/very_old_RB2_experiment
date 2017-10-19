@@ -160,7 +160,7 @@ public:
 	// on aquérit les positions et vitesses à partir du WhichDI_GPIO1_ForAquiring, avec AquiringFreq pendant AquiringDuration
 	void Record_PositionVelocity(int WhichDI_GPIO1_ForAquiring, double& AquiringFreq, double& AquiringDuration);
 	void Record_AnalogTrack1And2AndPosition1And2(int WhichDI_GPIO1_ForAquiring, double& AquiringFreq, double& AquiringDuration);
-	void Record_Trigger_Remove();
+	void Record_TRIGGER_Remove();
 	// rapatrie dans chemin complet: NewLocalFileName, renvoye le pas de temps de l'aquistion, et rempli la CNiReal64Matrix des donnée 
 	double Record_SaveAndRapatrie(CString NewLocalFileName, CNiReal64Matrix * pMatrix = NULL);
 	// rapatrie dans DEFAULT_LOCAL_FOLDER_RECORD_POSITION_VITESSE NewLocalFileName et renvoye la CNiReal64Matrix des donnée

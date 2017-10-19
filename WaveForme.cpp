@@ -313,7 +313,9 @@ void CWaveForme::InterpolateLinearFillNiMatrix(CNiReal64Matrix & LaMatrix, doubl
 	{
 		PGauche = PDroit;
 		PDroit = m_Liste_Points.GetNext(pos);
-		FacteurLin = (PDroit.y - PGauche.y) / ((PDroit.x - timeStep) - PGauche.x);
+		double Fucking2012_04_13 = ((PDroit.x - timeStep) - PGauche.x);
+		Fucking2012_04_13 = max(1, Fucking2012_04_13);
+		FacteurLin = (PDroit.y - PGauche.y) / Fucking2012_04_13;
 		OffsetLin = PGauche.y - PGauche.x * FacteurLin;
 
 		while(CurrentTime + precision < PDroit.x)

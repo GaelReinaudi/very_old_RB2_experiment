@@ -60,7 +60,8 @@ protected:
 public:
 	DECLARE_EVENTSINK_MAP()
 public:
-    bool ValueChangedPortCheckUpdateNow(BOOL Value);
+    bool ValueChangedPortCheckUpdateNowButStartStopSequence(BOOL Value);
+	bool ValueChangedPortCheckUpdateNow(BOOL Value);
 	void ValueChangedPortCheckUpdateAuto(BOOL Value);
 
 	// dessine la Séquence

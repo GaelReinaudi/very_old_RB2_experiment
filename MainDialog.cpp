@@ -237,6 +237,8 @@ void CMainDialog::ValueChangedButtonStartSequence(BOOL Value)
 		CleanNiCards();
 		m_pMainFrame->m_PortDialog.ValueChangedPortCheckUpdateNow(true);
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		try
+		{
 		ConfigureNiCards();
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		if(m_bVarieActive && m_Repete)
@@ -252,6 +254,12 @@ void CMainDialog::ValueChangedButtonStartSequence(BOOL Value)
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		LanceSequenceNiCards();
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	}
+	catch(CException* e)
+	{
+		e->ReportError();
+		e->Delete();
+	}
 	}
 	if(value == FALSE)
 	{
@@ -287,38 +295,37 @@ void CMainDialog::ConfigureNiCards()
 	// master device name.															//
 	CString AOfirstPhysChanName = master.AOChannels[0].PhysicalName;				//
 	CString AOdeviceName = AOfirstPhysChanName.Left(AOfirstPhysChanName.Find(_T('/'))+1);//
-	CString AOterminalNameBase = CString(_T("/")) + AOdeviceName;					//
+	CString masterNameBase = CString(_T("/")) + AOdeviceName;					//
 	// slave1 device name.															//
 	CString DOfirstPhysChanName = slave1.DOChannels[0].PhysicalName;				//
 	CString DOdeviceName = DOfirstPhysChanName.Left(DOfirstPhysChanName.Find(_T('/'))+1);//
-	CString DOterminalNameBase = CString(_T("/")) + DOdeviceName;					//
-	// slave2 device name.															//
-// 	CString AO2firstPhysChanName = slave2.AOChannels[0].PhysicalName;				//
-// 	CString AO2deviceName = AOfirstPhysChanName.Left(AOfirstPhysChanName.Find(_T('/'))+1);//
-// 	CString AO2terminalNameBase = CString(_T("/")) + AOdeviceName;					//
-	//
-	// E-Series Synchronization														//
-// 	slave1.Timing.MasterTimebaseSource = master.Timing.MasterTimebaseSource;		//
-// 	slave1.Timing.MasterTimebaseRate   = master.Timing.MasterTimebaseRate;			//
-// 	slave2.Timing.MasterTimebaseSource = master.Timing.MasterTimebaseSource;		//
-// 	slave2.Timing.MasterTimebaseRate   = master.Timing.MasterTimebaseRate;			//
-	//
-	//		if(m_WaitTrigger)
-	{
-		// Configure a digital edge start trigger so the master task				//
-		// start on an external trigger.											//
-		//			master.Triggers.StartTrigger.ConfigureDigitalEdgeTrigger(					//
-		//				DOterminalNameBase + _T("PFI6"),// corresponds to the "ACK1 input"		//
-		//				DAQmxDigitalEdgeStartTriggerEdgeRising);								//
-		//			master.Triggers.PauseTrigger.ConfigureDigitalLevelTrigger(					//
-		//				DOterminalNameBase + _T("PFI2"),// corresponds to the "REQ1 input"		//
-		//				DAQmxDigitalLevelPauseTriggerConditionHigh);							//
-	}
-	//
+	CString slaveNameBase = CString(_T("/")) + DOdeviceName;					//
+
+// 	master.Timing.SetMasterTimebaseSource(slaveNameBase + "DO/SampleClock");
+// 	double theRate = master.Timing.GetMasterTimebaseRate();
+// 	master.Timing.SetMasterTimebaseRate(theRate);
+
+	double digBaseRate = slave1.Timing.GetSampleClockTimebaseRate();// 200e6
+	double digRate = slave1.Timing.GetSampleClockRate();// 100K for a 10us sample duration from the ui
+	double digDiv = slave1.Timing.GetSampleClockTimebaseDivisor();// 2000 cf above
+
+	double anaMasterRate = master.Timing.GetMasterTimebaseRate();// 20e6
+	double anaMasterDiv = master.Timing.GetSampleClockTimebaseMasterTimebaseDivisor();// 1
+	double anaBaseRate = master.Timing.GetSampleClockTimebaseRate();// 20e6
+	double anaDiv = master.Timing.GetSampleClockTimebaseDivisor();// 200
+	double anaRate = master.Timing.GetSampleClockRate();// 100K for a 10us sample duration from the ui
+
+	master.ExportSignals.SetSampleClockOutputTerminal(masterNameBase + "PXI_Trig4");
+	CNiDAQmxSystem::ConnectTerminals(slaveNameBase + "PXI_Trig4", slaveNameBase + "PFI4");
+
+ 	slave1.Timing.SetSampleClockSource(slaveNameBase + "PFI4");
+	master.Control(DAQmxTaskVerify);												
+	slave1.Control(DAQmxTaskVerify);												
+	
 	// Configure a digital edge start trigger so both tasks							//
 	// start together: the slave is triggered by the master.						//
 	slave1.Triggers.StartTrigger.ConfigureDigitalEdgeTrigger(						//
-		AOterminalNameBase + _T("ao/StartTrigger"),									//
+		masterNameBase + _T("ao/StartTrigger"),									//
 		DAQmxDigitalEdgeStartTriggerEdgeRising);									//
 // 	slave2.Triggers.StartTrigger.ConfigureDigitalEdgeTrigger(						//
 // 		AOterminalNameBase + _T("ao/StartTrigger"),									//

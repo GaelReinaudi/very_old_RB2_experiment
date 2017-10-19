@@ -34,17 +34,17 @@ COLORREF DigBlanc =		(	RGB( 255,255,255 ));	COLORREF DigGriseeBlanc =		(	RGB( 18
 
 
 
-int Sequence::m_ColWidth = 50; 
-int Sequence::m_DigHeight = 12; 
+int Sequence::m_ColWidth = 45; 
+int Sequence::m_DigHeight = 16; 
 int Sequence::m_AnaHeight = 35; 
 int Sequence::m_EcartHoriz = 0;
 int Sequence::m_EcartVert = 0;
-CPoint Sequence::m_FirstDigTopLeft = CPoint(50, 20);
-CPoint Sequence::m_FirstAnaTopLeft = CPoint(50, 0);
+CPoint Sequence::m_FirstDigTopLeft = CPoint(m_ColWidth, 20);
+CPoint Sequence::m_FirstAnaTopLeft = CPoint(m_ColWidth, 0);
 int Sequence::m_AnaMax_mV = 10000; 
-int Sequence::m_AnaMin_mV = 0;
+int Sequence::m_AnaMin_mV = -10000;
 int Sequence::m_NbrDisplayDigChan = NUMBER_DIG_OUTPUT;
-int Sequence::m_NbrDisplayAnaChan = NUMBER_ANA_OUTPUT;
+int Sequence::m_NbrDisplayAnaChan = 8;
 
 Sequence::Sequence(void)
 : m_SeqSave("Une Séquence", "Seq", false)
@@ -733,7 +733,7 @@ int Sequence::MakeAnaBuffer(void)
 	ClearAnaBuffer();	
 	CalculateNbrPeriodes();	
 
-	m_AnaBufferNiMatrix[0].SetSize(NUMBER_ANA_OUTPUT_CARD_ANA_1, m_nPeriodes, CNiMatrix::NiMatrixDoNotInit);
+	m_AnaBufferNiMatrix[0].SetSize(NUMBER_ANA_OUTPUT_CARD_ANA_1_REAL, m_nPeriodes, CNiMatrix::NiMatrixDoNotInit);
 	m_AnaBufferNiMatrix[1].SetSize(NUMBER_ANA_OUTPUT_CARD_ANA_2, m_nPeriodes, CNiMatrix::NiMatrixDoNotInit);
 
 	Colonne* pLaColonne = NULL;
@@ -746,16 +746,16 @@ bool useOld = false;//true;
 if(useOld)
 {
 	// un buffer par sortie analogique
-	for(unsigned char indexChan = 0; indexChan < NUMBER_ANA_OUTPUT; indexChan++)
+	for(unsigned char indexChan = 0; indexChan < NUMBER_ANA_OUTPUT_CARD_ANA_1_REAL; indexChan++)
 	{
 //		p_AnaBuffer[indexChan] = new double[m_nPeriodes];	// allouons la mémoire
 		
 		iemePerSeq = 0;
 		DurActCol = 0;
 		// quelle carte ?
-		int indexCard = indexChan < NUMBER_ANA_OUTPUT_CARD_ANA_1 ? 0 : 1;
+		int indexCard = 0;//indexChan < NUMBER_ANA_OUTPUT_CARD_ANA_1 ? 0 : 1;
 		// quelle chanel de la carte
-		unsigned int indexChanCard = indexCard < 1 ? indexChan : indexChan - NUMBER_ANA_OUTPUT_CARD_ANA_1;
+		unsigned int indexChanCard = indexChan;//indexCard < 1 ? indexChan : indexChan - NUMBER_ANA_OUTPUT_CARD_ANA_1;
 		
 		for(int iemeCol = 1; iemeCol <= m_nColonnes; iemeCol++) 
 		{
@@ -780,12 +780,12 @@ if(!useOld)
 {
 	MakeWholeSeqWaveForme();
 	// un buffer par sortie analogique
-	for(unsigned char indexChan = 0; indexChan < NUMBER_ANA_OUTPUT; indexChan++)
+	for(unsigned char indexChan = 0; indexChan < NUMBER_ANA_OUTPUT_CARD_ANA_1_REAL; indexChan++)
 	{
 		// quelle carte ?
-		int indexCard = indexChan < NUMBER_ANA_OUTPUT_CARD_ANA_1 ? 0 : 1;
+		int indexCard = 0;//indexChan < NUMBER_ANA_OUTPUT_CARD_ANA_1 ? 0 : 1;
 		// quelle chanel de la carte
-		unsigned int indexChanCard = indexCard < 1 ? indexChan : indexChan - NUMBER_ANA_OUTPUT_CARD_ANA_1;
+		unsigned int indexChanCard = indexChan;//indexCard < 1 ? indexChan : indexChan - NUMBER_ANA_OUTPUT_CARD_ANA_1;
 		m_WholeSeqWaveForme[indexChan].InterpolateLinearFillNiMatrix(m_AnaBufferNiMatrix[indexCard], 1/m_SampleRate, indexChanCard);
 	}
 }
@@ -801,7 +801,7 @@ return;
 void Sequence::ClearAnaBuffer(void)
 {
 	// un buffer par sortie analogique
-	for(unsigned char indexChan = 0; indexChan < NUMBER_ANA_OUTPUT; indexChan++)
+	for(unsigned char indexChan = 0; indexChan < NUMBER_ANA_OUTPUT_CARD_ANA_1_REAL; indexChan++)
 		if(p_AnaBuffer[indexChan])
 			delete (p_AnaBuffer[indexChan]);
 return;
@@ -845,8 +845,8 @@ CRect Sequence::GetRectDigOut(int iemeCol, int indexDig)
 	if(m_ColWidth < 0)
 		size.cx = GetColonne(iemeCol)->GetDuree() / abs(m_ColWidth);
 
-	if(GetColonne(iemeCol)->Is_LimiteGaucheUnSplit() || GetColonne(iemeCol)->Is_LimiteDroiteUnSplit())
-		size.cx *= GetRatioDureeColonneDansUnSplit(iemeCol);
+// 	if(GetColonne(iemeCol)->Is_LimiteGaucheUnSplit() || GetColonne(iemeCol)->Is_LimiteDroiteUnSplit())
+// 		size.cx *= GetRatioDureeColonneDansUnSplit(iemeCol);
 
 	// recurence sur les lignes & Colonnes : case au dessus a gauche
 	if(iemeCol > 1 && indexDig > 0)
@@ -881,8 +881,8 @@ CRect Sequence::GetRectAnaOut(int iemeCol, int indexAna)
 	if(m_ColWidth < 0)
 		size.cx = GetColonne(iemeCol)->GetDuree() / abs(m_ColWidth);
 
-	if(GetColonne(iemeCol)->Is_LimiteGaucheUnSplit() || GetColonne(iemeCol)->Is_LimiteDroiteUnSplit())
-		size.cx *= GetRatioDureeColonneDansUnSplit(iemeCol);
+// 	if(GetColonne(iemeCol)->Is_LimiteGaucheUnSplit() || GetColonne(iemeCol)->Is_LimiteDroiteUnSplit())
+// 		size.cx *= GetRatioDureeColonneDansUnSplit(iemeCol);
 
 	// recurence sur les lignes & Colonnes : case au dessus a gauche
 	if(iemeCol > 1 && indexAna > 0)
@@ -923,7 +923,7 @@ CRect Sequence::Dessine_1_Digital(CDC& dc, int iemeCol, int indexDig, int IndexC
 
 	// si la colonne en question n'est que partielement active, on grise la partie inactive
 	double FractionActive = double(pLaCol->GetActiveDuree()) / double(pLaCol->GetDuree());
-	if(FractionActive != 1)
+	if(double(pLaCol->GetDuree()) != 0.0 && FractionActive != 1)
 	{	
 		CRect RectGrise = Circonscrit;
 		RectGrise.left += long(double(Circonscrit.Width()) * FractionActive);
@@ -958,7 +958,7 @@ CRect Sequence::Dessine_1_Analog(CDC& dc, int iemeCol, int indexAna, int IndexCo
 
 	// si la colonne en question n'est que partielement active, on grise la partie inactive
 	double FractionActive = double(pLaCol->GetActiveDuree()) / double(pLaCol->GetDuree());
-	if(FractionActive != 1)
+	if(double(pLaCol->GetDuree()) != 0.0 && FractionActive != 1)
 	{	
 		CRect RectGrise = circonci;
 		RectGrise.left += long(double(circonci.Width()) * FractionActive);
@@ -1039,7 +1039,8 @@ CRect Sequence::DessineSeqView1(CDC& dc)
 				if(Sequence::m_ParamDefaultDigOut[indexChan])
 				{	
 					rect = GetRectDigOut(1, indexChan) - CPoint(m_FirstDigTopLeft.x, 0);
-					texte.Format("%s", Sequence::m_ParamDefaultDigOut[indexChan]->m_NomTexte );				dc.DrawText(texte,&rect,DT_LEFT);
+					texte.Format("%s", Sequence::m_ParamDefaultDigOut[indexChan]->m_NomTexte );				
+					dc.DrawText(texte,&rect,DT_LEFT);
 					texte.Format("%d", indexChan );
 					dc.DrawText(texte,&rect,DT_RIGHT);
 				}

@@ -403,14 +403,14 @@ public:
 //	afx_msg void OnChar(UINT nChar, UINT nRepCnt, UINT nFlags);
 };
 
-#define _MOT_DET			0
-#define _MOT_INT 			1
+#define _MOT_INT			0
+#define _ZSL_DET 			1
 #define _REP_INT 			2
-#define _MONSTER_LOCK_1		3
-#define _3D_MOT_1_CURENT	4
-#define _3D_MOT_2_CURENT	5
-#define _2D_C_MOT_CURENT	6
-#define _MONSTER_LOCK_2		7
+#define _PROBE_B_ATTEN		3
+#define _ANA_04	4
+#define _ANA_05	5
+#define _ANA_06	6
+#define _I_MOT		7	//2013-12-18 renamed to _I_MOT from _MONSTER_LOCK_2.  
 
 #define _GUIDE_CURRENT		10
 #define _MONST_VERT_LOCK_1	12
@@ -421,23 +421,32 @@ public:
 #define _ZEEMAN				 0
 #define _MOT_AOM			 1
 #define _MOT_CLIC			 2
-#define _REP_AOM			 3
-#define _REP_CLIC			 4
+#define _MAIN_IGBT			 3
+#define _REPUMPS			 4
 #define _IMAG_AOM			 5
-#define _IMAG_CLIC			 6
-#define _DEPUMP_AOM			 7
-#define _H_LAUNCH			 8
-#define _V_LAUNCH			 9
-#define _3D_MOT				10	
+#define _IMAG_CLIC			 6  //Imaging Shutter (commented by Chih-Hsi on 2017-10-18.)
+#define _LATT_SHUT			 7
+#define _LAT_BACK			 8
+#define _NUSD_09			 9
+#define _NUSD_10			10	
 #define _2D_MOT				11	
-#define _2D_COMPRESS		12	
-#define _2D_PREGUIDE		13	
-#define _BIG_BIAS_PREGUIDE	14	
-#define _PINCH_COIL			15	
-#define _B_POLAR			16	
-#define _TRIGGER			17	
-#define _CAM_TRIGGER		18	
-#define _MONST_PD1_OFF		19
-#define _MONST_PD2_OFF		20
-#define _MONST_VERT_PD1_OFF	21
-#define _MONST_VERT_PD2_OFF	22
+#define _CAM_TRIGGER		12	
+#define _RepumpShutter		13	//Added 2013-12-2.
+#define _RedMOTShutter		14	//Added 2013-12-2. 
+#define _IGBT			15		//2013-12-18 changed from _TRANS_COOL to _IGBT.  
+#define _NUSD_16			16	
+#define _RBROAD				17	
+#define _RSINGLE			18	
+#define _NUSD_19			19
+#define _NUSD_20			20
+#define _NUSD_21	21
+#define _NUSD_22	22
+#define _B_SHUT		23//Added 2013-11-21.
+#define _C_SHUT		24//Added 2013-11-21. 
+#define _NUSD_25	25
+#define _NUSD_26	26
+#define _LASER_E_27	27
+#define _LASER_D_28	28
+#define _LASER_C_29	29
+#define _LASER_B_30	30
+#define _PROB_SHUT	31
