@@ -4,3 +4,4 @@
 /VTune/
 *.ncb
 *.suo
+/ipch/
