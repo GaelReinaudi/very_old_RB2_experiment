@@ -5,3 +5,6 @@
 *.ncb
 *.suo
 /ipch/
+/.vs/
+/Backup/
+/UpgradeLog.htm

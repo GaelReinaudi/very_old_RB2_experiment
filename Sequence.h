@@ -95,9 +95,9 @@ private:
     unsigned long*	m_Constr_Dig32bit; // Le 32bit représantant les sorties digitales .
 	int*			m_Constr_ColStartingGroupe; // la colonne commence t-elle un groupe de colonne donné
 	unsigned long*	m_Constr_Dig32ContiWithPrevious;// Chaque Dig continue t-elle la précédente: le Dig32Bit dit oui ou non bit a bit
-	(double*)			m_Constr_AnaDebut[NUMBER_ANA_OUTPUT];	// la valeur de début des WaveForme de chaque AnaOut de chaque Colonne.
-	(double*)			m_Constr_AnaFin[NUMBER_ANA_OUTPUT];	// la valeur de fin   des WaveForme de chaque AnaOut de chaque Colonne.
-	(int*)			m_Constr_AnaContiWithPrevious[NUMBER_ANA_OUTPUT];	// Chaque Ana continue t-elle la précédente: non, conti, contiunuité de la pente,... ?
+	double*			m_Constr_AnaDebut[NUMBER_ANA_OUTPUT];	// la valeur de début des WaveForme de chaque AnaOut de chaque Colonne.
+	double*			m_Constr_AnaFin[NUMBER_ANA_OUTPUT];	// la valeur de fin   des WaveForme de chaque AnaOut de chaque Colonne.
+	int*			m_Constr_AnaContiWithPrevious[NUMBER_ANA_OUTPUT];	// Chaque Ana continue t-elle la précédente: non, conti, contiunuité de la pente,... ?
 
 	// Actualsie le CtrlList pour l'affichage de donnée de Colonne et de ligne dans une boit de Dialog type m_SewView
 	void ActualiseCtrlListCol(CDC& dc);

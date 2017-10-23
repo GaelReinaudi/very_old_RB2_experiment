@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseOptimisée|Win32">
+      <Configuration>ReleaseOptimisée</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A676F517-B675-42F7-94D2-0801932B7450}</ProjectGuid>
+    <RootNamespace>Rb2Manip</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseOptimisée|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseOptimisée|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>15.0.26919.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(ProjectDir)</OutDir>
+    <IntDir>Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>Release\</OutDir>
+    <IntDir>Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseOptimisée|Win32'">
+    <OutDir>$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>F:\Program Files (x86)\National Instruments\MeasurementStudioVS2008\VCNET\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;NI_MEASUREMENT_STUDIO;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level2</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x040c</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <IgnoreSpecificDefaultLibraries>LIBC;libcmtd.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <FixedBaseAddress>false</FixedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+    </Midl>
+    <ClCompile>
+      <AdditionalIncludeDirectories>F:\Program Files (x86)\National Instruments\MeasurementStudioVS2008\VCNET\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;NI_MEASUREMENT_STUDIO;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <Link>
+      <AdditionalDependencies>version.lib;setupapi.lib;BvcDibMfc8.lib;BcamApiMfc8.lib;muparser.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <IgnoreSpecificDefaultLibraries>libc.lib;libcd.lib;libcmtd.lib;LIBC;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <FixedBaseAddress>false</FixedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseOptimisée|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+    </Midl>
+    <ClCompile>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;NI_MEASUREMENT_STUDIO;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x040c</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <IgnoreSpecificDefaultLibraries>LIBC;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <FixedBaseAddress>false</FixedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Colonne.cpp" />
+    <ClCompile Include="DAQmxTasksAndCodes.cpp" />
+    <ClCompile Include="DialogCurve.cpp" />
+    <ClCompile Include="DialogFilmColonnes.cpp" />
+    <ClCompile Include="DialogParam.cpp" />
+    <ClCompile Include="DialogSetValue.cpp" />
+    <ClCompile Include="DialogVariation.cpp" />
+    <ClCompile Include="DialogWaveForm.cpp" />
+    <ClCompile Include="FolderUtils.cpp" />
+    <ClCompile Include="InputDialog.cpp" />
+    <ClCompile Include="MainDialog.cpp" />
+    <ClCompile Include="MainFrm.cpp" />
+    <ClCompile Include="nrutil.cpp" />
+    <ClCompile Include="OriginClient.cpp" />
+    <ClCompile Include="Parametre.cpp" />
+    <ClCompile Include="PortDialog.cpp" />
+    <ClCompile Include="PrntScreen.cpp" />
+    <ClCompile Include="ProDialog.cpp" />
+    <ClCompile Include="Rb2Doc.cpp" />
+    <ClCompile Include="Rb2Manip.cpp" />
+    <ClCompile Include="Rb2View.cpp" />
+    <ClCompile Include="RelationAnalog.cpp" />
+    <ClCompile Include="Sequence.cpp" />
+    <ClCompile Include="SeqViewDialog.cpp" />
+    <ClCompile Include="serialport.cpp" />
+    <ClCompile Include="SettingSave.cpp" />
+    <ClCompile Include="SpeakWithOriginDlg.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseOptimisée|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Variation.cpp" />
+    <ClCompile Include="VariationDialog.cpp" />
+    <ClCompile Include="WaveForme.cpp" />
+    <ClCompile Include="_DefinitionSequenceMainDialog.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AlgorithmeGenetique.h" />
+    <ClInclude Include="CamDialog.h" />
+    <ClInclude Include="Colonne.h" />
+    <ClInclude Include="ControlesDuMainDialog.h" />
+    <ClInclude Include="DAQmxTasksAndCodes.h" />
+    <ClInclude Include="DialogCurve.h" />
+    <ClInclude Include="DialogFilmColonnes.h" />
+    <ClInclude Include="DialogParam.h" />
+    <ClInclude Include="DialogSetValue.h" />
+    <ClInclude Include="DialogTranslationNewPort.h" />
+    <ClInclude Include="DialogVariation.h" />
+    <ClInclude Include="DialogWaveForm.h" />
+    <ClInclude Include="FitDialog.h" />
+    <ClInclude Include="Fitting.h" />
+    <ClInclude Include="GeneticDialog.h" />
+    <ClInclude Include="InputDialog.h" />
+    <ClInclude Include="LaserDialog.h" />
+    <ClInclude Include="MainDialog.h" />
+    <ClInclude Include="MainFrm.h" />
+    <ClInclude Include="NewPortXPS.h" />
+    <ClInclude Include="NiIncludes.h" />
+    <ClInclude Include="Parametre.h" />
+    <ClInclude Include="PortDialog.h" />
+    <ClInclude Include="PrntScreen.h" />
+    <ClInclude Include="ProDialog.h" />
+    <ClInclude Include="Rb2Doc.h" />
+    <ClInclude Include="Rb2Manip.h" />
+    <ClInclude Include="Rb2View.h" />
+    <ClInclude Include="RelationAnalog.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="Sequence.h" />
+    <ClInclude Include="SeqViewDialog.h" />
+    <ClInclude Include="serialport.h" />
+    <ClInclude Include="SerieImage.h" />
+    <ClInclude Include="SettingSave.h" />
+    <ClInclude Include="SMTPConnection2.h" />
+    <ClInclude Include="SpeakWithOriginDlg.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="TraitImageDialog.h" />
+    <ClInclude Include="Variation.h" />
+    <ClInclude Include="VariationDialog.h" />
+    <ClInclude Include="WaveForme.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="DialogWaveForm.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="res\bitmap1.bmp" />
+    <None Include="res\html_dia.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="res\mainfram.bmp" />
+    <None Include="res\MainIcon.ico" />
+    <None Include="res\Rb2Manip.ico" />
+    <None Include="res\Rb2Manip.rc2" />
+    <None Include="res\Rb2ManipDoc.ico" />
+    <None Include="res\scr1.bmp" />
+    <None Include="res\Toolbar.bmp" />
+    <None Include="VTune\Rb2Manip.vpj" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Rb2Manip.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties _x007B_17301DA3-C84D-11CF-AE6F-0020AF31CEF9_x007D_="NI::CNiNumEdit" _x007B_D940E4D2-6079-11CE-88CB-0020AF6845F6_x007D_="NI::CNiKnob" RESOURCE_FILE="Rb2Manip.rc" _x007B_D940E4BE-6079-11CE-88CB-0020AF6845F6_x007D_="NI::CNiButton" _x007B_B68DBFAB-16A0-11CE-80BF-0020AF31CEF9_x007D_="NI::CNiGraph" _x007B_D940E4C8-6079-11CE-88CB-0020AF6845F6_x007D_="NI::CNiSlide" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

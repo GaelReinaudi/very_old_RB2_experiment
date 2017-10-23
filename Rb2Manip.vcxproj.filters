@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Utils">
+      <UniqueIdentifier>{6c4a4fcc-0b69-4c9a-a450-36649ccd7c99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GaelClasse">
+      <UniqueIdentifier>{f34a2973-999e-4f90-91bc-6c6d97c89a69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Utils">
+      <UniqueIdentifier>{3d0d2137-924c-459e-8aa1-3f7fa6c67f39}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GaelClasse">
+      <UniqueIdentifier>{6958d535-487d-4b88-bdba-d5543a04077f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="_DefinitionSequenceMainDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DAQmxTasksAndCodes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InputDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MainDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MainFrm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PortDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Rb2Manip.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Rb2View.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SeqViewDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VariationDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FolderUtils.cpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="nrutil.cpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="OriginClient.cpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="PrntScreen.cpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Rb2Doc.cpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="serialport.cpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="SpeakWithOriginDlg.cpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Colonne.cpp">
+      <Filter>Source Files\GaelClasse</Filter>
+    </ClCompile>
+    <ClCompile Include="DialogCurve.cpp">
+      <Filter>Source Files\GaelClasse</Filter>
+    </ClCompile>
+    <ClCompile Include="DialogFilmColonnes.cpp">
+      <Filter>Source Files\GaelClasse</Filter>
+    </ClCompile>
+    <ClCompile Include="DialogParam.cpp">
+      <Filter>Source Files\GaelClasse</Filter>
+    </ClCompile>
+    <ClCompile Include="DialogSetValue.cpp">
+      <Filter>Source Files\GaelClasse</Filter>
+    </ClCompile>
+    <ClCompile Include="DialogVariation.cpp">
+      <Filter>Source Files\GaelClasse</Filter>
+    </ClCompile>
+    <ClCompile Include="DialogWaveForm.cpp">
+      <Filter>Source Files\GaelClasse</Filter>
+    </ClCompile>
+    <ClCompile Include="Parametre.cpp">
+      <Filter>Source Files\GaelClasse</Filter>
+    </ClCompile>
+    <ClCompile Include="ProDialog.cpp">
+      <Filter>Source Files\GaelClasse</Filter>
+    </ClCompile>
+    <ClCompile Include="RelationAnalog.cpp">
+      <Filter>Source Files\GaelClasse</Filter>
+    </ClCompile>
+    <ClCompile Include="Sequence.cpp">
+      <Filter>Source Files\GaelClasse</Filter>
+    </ClCompile>
+    <ClCompile Include="SettingSave.cpp">
+      <Filter>Source Files\GaelClasse</Filter>
+    </ClCompile>
+    <ClCompile Include="Variation.cpp">
+      <Filter>Source Files\GaelClasse</Filter>
+    </ClCompile>
+    <ClCompile Include="WaveForme.cpp">
+      <Filter>Source Files\GaelClasse</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ControlesDuMainDialog.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CamDialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DAQmxTasksAndCodes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FitDialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneticDialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InputDialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LaserDialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MainDialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MainFrm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NiIncludes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PortDialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Rb2Manip.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Rb2View.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SeqViewDialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TraitImageDialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VariationDialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PrntScreen.h">
+      <Filter>Header Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Rb2Doc.h">
+      <Filter>Header Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="serialport.h">
+      <Filter>Header Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="SMTPConnection2.h">
+      <Filter>Header Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="SpeakWithOriginDlg.h">
+      <Filter>Header Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="AlgorithmeGenetique.h">
+      <Filter>Header Files\GaelClasse</Filter>
+    </ClInclude>
+    <ClInclude Include="Colonne.h">
+      <Filter>Header Files\GaelClasse</Filter>
+    </ClInclude>
+    <ClInclude Include="DialogCurve.h">
+      <Filter>Header Files\GaelClasse</Filter>
+    </ClInclude>
+    <ClInclude Include="DialogFilmColonnes.h">
+      <Filter>Header Files\GaelClasse</Filter>
+    </ClInclude>
+    <ClInclude Include="DialogParam.h">
+      <Filter>Header Files\GaelClasse</Filter>
+    </ClInclude>
+    <ClInclude Include="DialogSetValue.h">
+      <Filter>Header Files\GaelClasse</Filter>
+    </ClInclude>
+    <ClInclude Include="DialogTranslationNewPort.h">
+      <Filter>Header Files\GaelClasse</Filter>
+    </ClInclude>
+    <ClInclude Include="DialogVariation.h">
+      <Filter>Header Files\GaelClasse</Filter>
+    </ClInclude>
+    <ClInclude Include="DialogWaveForm.h">
+      <Filter>Header Files\GaelClasse</Filter>
+    </ClInclude>
+    <ClInclude Include="Fitting.h">
+      <Filter>Header Files\GaelClasse</Filter>
+    </ClInclude>
+    <ClInclude Include="NewPortXPS.h">
+      <Filter>Header Files\GaelClasse</Filter>
+    </ClInclude>
+    <ClInclude Include="Parametre.h">
+      <Filter>Header Files\GaelClasse</Filter>
+    </ClInclude>
+    <ClInclude Include="ProDialog.h">
+      <Filter>Header Files\GaelClasse</Filter>
+    </ClInclude>
+    <ClInclude Include="RelationAnalog.h">
+      <Filter>Header Files\GaelClasse</Filter>
+    </ClInclude>
+    <ClInclude Include="Sequence.h">
+      <Filter>Header Files\GaelClasse</Filter>
+    </ClInclude>
+    <ClInclude Include="SerieImage.h">
+      <Filter>Header Files\GaelClasse</Filter>
+    </ClInclude>
+    <ClInclude Include="SettingSave.h">
+      <Filter>Header Files\GaelClasse</Filter>
+    </ClInclude>
+    <ClInclude Include="Variation.h">
+      <Filter>Header Files\GaelClasse</Filter>
+    </ClInclude>
+    <ClInclude Include="WaveForme.h">
+      <Filter>Header Files\GaelClasse</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\bitmap1.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\mainfram.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\MainIcon.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Rb2Manip.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Rb2Manip.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Rb2ManipDoc.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\scr1.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Toolbar.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="DialogWaveForm.htm" />
+    <None Include="res\html_dia.htm" />
+    <None Include="VTune\Rb2Manip.vpj" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Rb2Manip.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
